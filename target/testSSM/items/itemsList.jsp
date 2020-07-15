@@ -54,8 +54,8 @@
 						</c:if>
 					</td>
 					<td>
-						<a href="javascript:void(0)" class="btn btn-info" onclick="">修改</a>|
-						<a href="" class="btn btn-danger">删除</a>
+						<a href="${pageContext.request.contextPath}/items/editItem.jsp?id=${items.id}" class="btn btn-info" onclick="">修改</a>|
+						<a href="${pageContext.request.contextPath}/items/delete.action?id=${items.id}" class="btn btn-danger">删除</a>
 					</td>
 				</tr>
 			</c:forEach>

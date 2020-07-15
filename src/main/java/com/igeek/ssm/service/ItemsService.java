@@ -56,4 +56,14 @@ public class ItemsService {
     public void add(Items items){
         mapper.insertSelective(items);
     }
+
+    //修改商品
+    public void update(Items items){
+        mapper.updateByPrimaryKeySelective(items);
+    }
+
+    //删除商品
+    public void delete(Integer id){
+        mapper.deleteByPrimaryKey(id);
+    }
 }

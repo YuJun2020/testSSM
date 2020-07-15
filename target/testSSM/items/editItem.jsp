@@ -12,10 +12,10 @@
 <body>
 <div class="container" style="margin-top: 100px">
 	<h2 class="form-group">修改商品</h2>
-	<form id="f" action="" method="post" enctype="multipart/form-data">
-		<div class="form-group" hidden="hidden">
+	<form id="f" action="${pageContext.request.contextPath}/items/update.action?id=<%=request.getParameter("id")%>" method="post" enctype="multipart/form-data">
+		<div class="form-group" >
 			<label for="id">商品id</label>
-			<input type="text" class="form-control" id="id" placeholder="id" name="id">
+			<input type="text" class="form-control" id="id" placeholder=<%=request.getParameter("id")%> name="id">
 		</div>
 		<div class="form-group">
 			<label for="name">商品名称</label>

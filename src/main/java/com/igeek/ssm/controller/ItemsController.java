@@ -67,4 +67,16 @@ public class ItemsController {
         //为了避免重复提交表单的操作，可以选择重定向，地址栏显示目标地址
         return "redirect:findAll.action";
     }
+
+    @RequestMapping("/update.action")
+    public String update(Items items){
+        service.update(items);
+        return "redirect:findAll.action";
+    }
+
+    @RequestMapping("/delete.action")
+    public String delete(Integer id){
+        service.delete(id);
+        return "redirect:findAll.action";
+    }
 }
